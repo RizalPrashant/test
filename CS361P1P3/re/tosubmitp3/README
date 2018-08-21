@@ -1,0 +1,66 @@
+# Project 1 Part 3: Regular Expressions
+
+* Author: Prashant Rizal
+
+* Class: CS361 Section 2
+
+* Semester: Spring 2018
+
+
+
+## Overview
+
+
+
+This program creates a NFA for a given regular expression. 
+
+
+
+## Compiling and Using
+
+
+
+To compile, from the terminal:
+
+javac -cp ".:./CS361FA.jar" re.REDriver
+
+
+Then, to run the program:
+
+java -cp ".:./CS361FA.jar" re.REDriver filename
+ 
+
+## Discussion
+One good thing to learn about this program is how to use jar files in implementations.
+Also, this program helped me practice recursive algorithms.
+ 
+
+
+## Testing
+
+
+I compared the toString of my data with the expected results shown in the project
+
+specifications.
+
+
+
+## Extra Credit
+
+
+
+None
+
+
+
+## Sources used
+
+
+
+None
+
+
+
+----------
+
+This README template is using Markdown. To preview your README output, you can copy your file contents to a Markdown editor/previewer such as [https://stackedit.io/editor](https://stackedit.io/editor).

@@ -1,0 +1,97 @@
+# Project 1 Part 1: Deterministic Finite Automata
+
+
+
+* Author: Prashant Rizal
+
+* Class: CS361 Section 2
+
+* Semester: Spring 2018
+
+
+
+## Overview
+
+
+
+This program models a deterministic finite automation. The project helps
+
+familiarize with packages in java and implementing interfaces and using
+
+the java collection frameworks.
+
+
+
+## Compiling and Using
+
+
+
+To compile, from the terminal:
+
+javac fa/dfa/DFADriver.java
+
+
+
+Then, to run the program:
+
+ java fa.dfa.DFADriver ./tests/"name of your test file"
+
+ 
+
+ Alternatively, from eclipse, you can run configurations then as an argument give the
+
+ location of your text file then press run.
+
+ 
+
+## Discussion
+
+
+
+One thing I always thought was that the abstract classes were implemented just like interfaces
+
+but because of this project I realized that abstract classes have to be extended and not
+
+implemented. However, the abstract methods inside are implemented just like an interface. Another
+
+thing was that the toString method was a bit confusing however I managed it by making state table
+
+differently and returning the table to the toString and creating the entire output that way. Also,
+
+this project gave me good practice of using the Set Interface and the key,value storage concept 
+
+of HashMaps and HashSets.
+
+
+
+
+
+## Testing
+
+
+
+I compared the toString of my data with the expected results shown in the project
+
+specifications.
+
+
+
+## Extra Credit
+
+
+
+None
+
+
+
+## Sources used
+
+
+
+None
+
+
+
+----------
+
+This README template is using Markdown. To preview your README output, you can copy your file contents to a Markdown editor/previewer such as [https://stackedit.io/editor](https://stackedit.io/editor).

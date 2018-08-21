@@ -1,0 +1,77 @@
+# Project 1 Part 2: Nondeterministic Finite Automata
+
+* Author: Prashant Rizal
+
+* Class: CS361 Section 2
+
+* Semester: Spring 2018
+
+
+
+## Overview
+
+
+
+This program models a non-deterministic finite automation. The project helps
+
+strengthen the concepts of packages in java and implementing interfaces and 
+
+implementing graph search algorithms.
+
+
+
+## Compiling and Using
+
+
+
+To compile, from the terminal:
+
+javac fa/nfa/NFADriver.java
+
+
+Then, to run the program:
+
+java fa.nfa.NFADriver ./tests/"name of your file here"
+ 
+
+ Alternatively, from eclipse, you can run configurations then as an argument give the
+
+ location of your text file then press run.
+
+ 
+
+## Discussion
+
+ One good thing to learn for this project was the implementation of graph search 
+ 
+ algorithm which used queue and stack concepts.
+
+
+## Testing
+
+
+I compared the toString of my data with the expected results shown in the project
+
+specifications.
+
+
+
+## Extra Credit
+
+
+
+None
+
+
+
+## Sources used
+
+
+
+None
+
+
+
+----------
+
+This README template is using Markdown. To preview your README output, you can copy your file contents to a Markdown editor/previewer such as [https://stackedit.io/editor](https://stackedit.io/editor).
