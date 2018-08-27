@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sort Testing]">
+  <parameter name="listType" value="WrappedDLL"/>
+  <test name="SortTest(failed)">
+    <parameter name="listType" value="WrappedDLL"/>
+    <classes>
+      <class name="SortTest">
+        <methods>
+          <include name="testSort_BigList"/>
+          <include name="init"/>
+          <include name="testSortComparator_BigList"/>
+        </methods>
+      </class> <!-- SortTest -->
+    </classes>
+  </test> <!-- SortTest(failed) -->
+</suite> <!-- Failed suite [Sort Testing] -->

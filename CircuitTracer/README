@@ -1,0 +1,89 @@
+****************
+* Project CircuitTracer
+* Section 3
+* 12/9/2016
+* Prashant Rizal
+**************** 
+
+OVERVIEW:
+The program reads in command line argument and manages exception while parsing the file. It implements a brute force search algorithm as well.
+
+INCLUDED FILES:
+ CircuitTracer.java - It is where you read in the command line argument and implement the search algorithm.
+ CircuitBoard.java - It is where you parse the files and throw exceptions for invalid file format and invalid file names.
+ README - this file
+ Storage.java - Storage class to store data in stacks or in queue.
+ TraceState.java - TraceState class which makes objects for each states of the path taken to reach from 1 to 2.
+ InvalidFileFormatException.java - An exception class for exception InvalidFileFormatException
+
+COMPILING AND RUNNING:
+ javac CircuitTracer to compile.
+ To run:
+ java CircuitTracer ["-c" or "-g"] ["-s" or "-q"] filename from the command line
+ or just run configurations, go to argument tab add ["-c" or "-g"] ["-s" or "-q"] filename from the command line as the three arguments and then run.
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+ The core part of the program happens in CircuitTracer.java. The CircuitBoard.java is basically creating a 2dimensional CircuitBoard array whose value is obtained from parsing the file.
+ The in CircuitTracer, the arguments are accessed which is the stack or queue method, the commandline or gui output, and then the name of the filename. Using that filename, a new CircuitBoard
+ is instantiated in there. The every state of the circuitboard is instantiated using TraceState object which is the use of TraceState.java. Then, the states are added using the Storage class so 
+ that the arraylist of those tracestates is created to make a path.I used the starting point and for the left right, up and down positions from the starting point, provided if open, created a tracestate. Then, using the tracestate's coordinates I created more tracestates
+ for all directions if the tracestate is not adjacent to the ending point.
+
+TESTING:
+
+ sh ./testProg on the command line.
+ Also, I manually check to validate each file given to me using the compiling and running section for each file and going through the traces.
+
+
+DISCUSSION:
+ I was really confused while populating the character array for the circuitboard. I had used fileScan.next() to get the next row and column values but because of the
+ newLine character still sitting there I got an exception. So, I had to change my approach completey to get around it. Also, I had problems of Invalid File Format Exceptions overwriting with each other when I kept them in the same loop.
+ I had to understand how to create a 2 dimensional arrays using characters. Also, I didnt get good output when I compared the arguments using the = sign. So, I realized I had to use isEqual method to compare the strings.
+ Also, I tried to print the board.toString() entirely however it didnt work so I printed bestPaths.get(i).toString() so that my tracestates will show up in the output.
+ It was really challenging to fix the exceptions of the invalid files. I realized I was throwing all the exceptions inside the same for loop so it was overwriting with each other.
+ 
+ ANALYSIS:
+ What is the order of state evaluation and new state generation for a Storage object 
+that uses a stack compared to one that uses a queue?
+
+The order of state evaluation is constant because only the top item is evaluated using either first() or peek() depending on if its stack of queue.
+For new state generation, because generation involves going through all the elements at least one time, so the order is O(n).
+ It is the same thing for both stack and queue.
+ 
+How is the total number of search states affected by the choice of stack or queue?
+
+The total number of search states is not affected by the choice of stack or queue because the best path is going to be the same for both.
+The only thing that is affected is the order of execution.
+
+What is the Big-Oh runtime for the search algorithm?
+O(n^2) or quadratic.
+
+How is memory use (the number of states in Storage at one time) affected by the choice of underlying structure?
+A stack need to only keep track of the topmost element however a queue need to keep track of the frontmost and the backmost elements so queue needs more memory
+than stack.
+
+Does using one of the storage structures find a solution faster than the other? Always?
+
+Stack is a depth first search while queue is a width first search. So, it is possible for stack to find a solution faster
+since it goes to the depth of the stack trace.However, for a matrix of 1 row, queue is going to be faster since it goes width first. So, it really depends 
+on the situation.
+
+Does using either of the storage structures guarantee that the first solution found will be an ideal solution?
+
+It depends on the position of the starting point and the ending point. There is not a really good chance to guaranteed that the first solution will
+work the best.
+
+EXTRA CREDIT:
+
+ None
+
+
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writting for your boss and/or potential
+customers.
+
+

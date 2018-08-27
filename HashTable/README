@@ -1,0 +1,123 @@
+****************
+
+* Project 3/HashTable
+
+* Class : CS321-003
+
+* Date : 10/31/2017`
+
+* Prashant Rizal
+
+**************** 
+
+
+
+OVERVIEW:
+
+This program deals with open addressing using linear probing and double hashing. It compares and sees
+how the load factor affect the average number of probes in both kinds of probing.
+
+INCLUDED FILES:
+
+HashObject.java: class where hashObjects which can be String, long or integer is made.
+
+HashTable.java: class which creates array of the hash
+objects into a table and which has the methods to insert data and more.
+
+HashTest.java: Experiment one class using our HashTable. (main method)
+
+HashTestWithJava.java: Experiment two using the default java's Hashtable library. (main method)
+
+README : Readme file.
+
+COMPILING AND RUNNING:
+
+To compile just enter the following command in the 
+terminal after getting in the directory of your program.
+ javac HashTest
+ javac HashTestWithJava
+ javac HashObject
+ javac HashTable
+ 
+ then 
+Then to run the program enter valid arguments in the form
+java HashTest <input type> <load factor> [<debug level>] for experiment one
+java HashTestWithJava <input type> <load factor> <table size> [<debug level>]
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+The class HashObject.java is used to create individual objects to hash of generic type T. It could be a string, long or an integer value
+for our project but theoritically can be any value. The the HashTable class created an array of the hashObjects and was used to keep track of
+the number of probes and duplicate counts while inserting data in the hashtable. The there were two experiments with main methods. HashTest.java
+was the one where we implemented our hashtable array that we created as the class HashTable.java and HashTestWithJava used the default java's 
+Hashtable implementation.
+
+TESTING:
+
+ I ran the program according to the compiling and running section and compared my data with the sample_results.txt to see if I get
+ correct data or not.
+
+
+DISCUSSION:
+ 
+ One big problem that I got was the value of average probes for double hashing was way more than single hashing which is not the expected 
+ outcome. This, I solved by decreasing the number of probes of linear hashing from the number of probes of double hashing since by the time it
+ goes to inserting in double hashing, the number of probes of linear hashing is also accumulated there. I created a clearArray method thinking 
+ maybe I could clear array every time after single hash before double hashing to encounter the problem but then I realized the easier way to do it.
+ It was really fascinating to learn how if you create your own HashObject class the .equals() method only compares the memory addresses and it is
+ really necessary to overwrite the .equals() method with your own method to compare the elements and the key. And another problem I have is that the
+ current time value of Experiment one takes a really long time to load. I can not figure out why that is.
+ 
+ Table:
+ 
+ For random number (int):
+ 
+ alpha   Linear  Double
+-----------------------------
+	0.5  1.503  1.380
+	0.6  1.753  1.524
+	0.7  2.169  1.718
+	0.8  2.976  2.010
+	0.9  5.582  2.559
+	0.95  10.689  3.133
+	0.98  24.819  3.988
+	0.99  43.179  4.662
+	
+For current time (long) number:
+
+alpha   Linear  Double
+-----------------------------
+  0.5  1.000  1.000
+  0.6  1.000  1.000
+  0.7  1.000  1.000
+  0.8  1.000  1.000
+  0.9  1.000  1.000
+  0.95  1.000  1.000
+  0.98  1.000  1.000
+  0.99  1.000  1.000
+
+For word list (String) :
+
+alpha   Linear  Double
+-----------------------------
+  0.5  1.591  1.398
+  0.6  2.075  1.541
+  0.7  3.756  1.725
+  0.8  7.431  2.018
+  0.9  22.365  2.566
+  0.95  155.207  3.154
+  0.98  375.386  3.958
+  0.99  523.739  4.610
+
+EXTRA CREDIT:
+
+ None
+
+
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writing for your boss and/or potential
+customers.

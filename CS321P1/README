@@ -1,0 +1,88 @@
+****************
+
+* Project 1/ Memory Cache
+
+* Class : CS321-003
+
+* Date : 09/08/2017`
+
+* Prashant Rizal
+
+**************** 
+
+
+
+OVERVIEW:
+
+This program implements a memory cache ADT using a double
+
+linked list. It also reads data from files and creates a test
+
+program to verify the operation of your cache.
+
+INCLUDED FILES:
+
+Cache.java : It the the Cache class which implements the ICache interface. 
+This is the class where all the methods of the cache
+   is coded to implement the double linked list.
+
+Test.java : It is the tester class where we instantiate the cache objects.
+We read data from the file, store it as tokens and add it to the cache we instantiate.
+Then it is used to know the nitrates and misstates as well.
+
+README : Readme file.
+
+COMPILING AND RUNNING:
+
+To compile just enter the following command in the 
+terminal after getting in the directory of your program.
+ javac Test
+Then to run the program enter valid arguments in the form
+java Test [1] [capacity] [filename] for single level cache
+or
+java Test [2] [capacity L1] [capacity L2] [filename]
+ 
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+The program consisted of two major classes “Test.java” and “Cache.java”. Cache 
+implemented the ICache interface to get the methods needed for a linked list to function.
+Also, we had to create our own double linked list so a DLLNode class was provided to us.
+Then Cache object were instantiated in the Test class. The program takes arguments for 
+a single layer cache or a double layer memory cache. It is decided by the first argument.
+The second argument decides the capacity size of the level 1 cache. If its a two leveled cache,
+the third argument gives the capacity size of the L2 cache and the fourth argument gives the 
+filename to parse. Otherwise, the third argument is the filename to parse. 
+
+TESTING:
+
+ We tested the program by parsing different text files and seeing if your cache 
+ is implemented properly. The file was broken into tokens with String Tokenizer 
+ then each token was added to the cache to test the functionality. 
+
+
+DISCUSSION:
+ 
+ One of the biggest issues I encountered was trying to get my hit rates and access rates correct. I had called
+ add method() and remove method in get() method. Also, my add() method was calling get() method as well which 
+ is why there were multiple additions to the count of number of hits and access in a single access process.
+ I learnt that by keeping track of count of the tokens I put in the memory cache, I could easily keep count of 
+ the access value. Also, I got rid of the use of get() and add() inside each other and made helper methods to 
+ make my code more smoothly flow with relation to keeping count of the integer values.
+ Debugging was the hardest part of the programming. Writing code was DLL was not so daunting but tesing for every
+ edge cases was the hard part especialy when you are unaware how many edge cases are there.However, I really learned 
+ how to debug properly and get my solutions correct.
+
+ 
+EXTRA CREDIT:
+
+ None
+
+
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writing for your boss and/or potential
+customers.

@@ -1,0 +1,35 @@
+# Project 5: MY TUNES
+
+* Author: Prashant Rizal
+* Class: CS121 Section 1
+* Semester: Spring 2016
+
+## Overview
+
+The main function of this project is to create two classes called MyTunesGUI and MyTunesGUIPanel. MyTunesGUIPanel will extend JPanel and is where all the GUI setup takes place. MyTunesGUI will create the JFrame and will have the main method to launch it.
+
+## Compiling and Using
+
+To compile use the following codes:
+ javac MyTunesGUI.java    and
+javac MyTunesGUIPanel.java
+
+Then to run it:
+ java MyTunesGUI
+
+## Discussion
+My main problem in a long code like this was not paying attention to simple mistakes. For example, I was stuck to find why the nextButton changed the song selections in JList two at a time that is, it used to skip a song entirely and select the next one. I only realized later that it was the result of adding action listener to the nextButton button twice. It was confusing a little bit to understand that we have to remove the grid entirely and draw a new one. Also, we had to use the revalidation for grid. 
+
+What parts of the project did you find challenging? Is there anything that finally "clicked" for you in the process of working on this project?
+The main thing that I learnt was debugging. By putting in breakpoints and following through each line using F6, I could see where the output was produced not as expected and see how to make necessary edits. This was necessary for me especially because I kept making simple bugs throughout the program.
+I also found refreshing the JPanel Component quite challenging at first. I looked at the documentation for JPanel and sample code for the GameBoard that taught me how to do a repaint.
+
+## Extra Credit
+
+None
+
+## Sources used
+
+None
+
+

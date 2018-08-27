@@ -1,0 +1,68 @@
+****************
+* Project 2/ Priority Queue
+* CS 321-003
+* 10/05/2017
+* Prashant Rizal
+**************** 
+
+OVERVIEW:
+
+ This program implements a MaxHeap ADT using an array which is then used to
+ implement Priority Queue ADT. Also, there are other classes present to
+ create a CPU scheduling simulation.
+INCLUDED FILES:
+
+* MaxHeap.java == Maxheap Class
+* PQueue.java  == PQueue Class
+* Process.java  == Process Class
+* ProcessGenerator.java == ProcessGenerator Class
+* README == Readme File
+
+COMPILING AND RUNNING:
+Just right click on the project and go to run as===> then run it as a TestNG suite. or in terminal. compile javac CPUScheduler.java and the run it using the command java CPUSCheduler [arg1] [arg2] [arg3] [arg4][arg5]
+ 
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ For this program, a lot of heapNode object is used to make a MaxHeap using
+ MaxHeap Class. Then the Priority Queue class implements the Maxheap class.
+ Then, there is a Process class which builds processes and the Process is
+ instantiated in the ProcessGenerator class. Then, the class with main method
+ is CPUScheduler which runs the program.
+
+
+TESTING:
+
+To test the classes on eclipse, right click the project and run as a testNG
+suite. You can see the test results in the console.
+To see the result on terminal, go to your location of the project 
+and there, use java CPUScheduler maxProcessTime maxPriorityLevel 
+timeToIncrementPriority simulationTime processArrivalRate
+
+
+
+DISCUSSION:
+One of the problem I encountered was getting off by 1 error while 
+randomly generating priority level and finishing time in the
+getNewProcess of ProcessGenerator. I failed to increment some
+while loops properly which is my my program used to get stuck
+in endless loop sometimes. One important thing I learnt from
+this project was reading UML Diagram. I think this diagram is
+important since it helps so much to see the objects and classes
+in your code interacting with each other as well as the methods
+inside them and the return types of the methods.
+It was pretty challenging to debug the MaxHeap class but with 
+good use of testNG, debugger and simply testing by inserting print 
+statements in between codes, I managed to fix those errors.
+ 
+ 
+ 
+EXTRA CREDIT:
+
+None
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writing for your boss and/or potential
+customers.

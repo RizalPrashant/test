@@ -1,0 +1,20 @@
+# Project 1: Traffic Animation
+
+* Author: Prashant Rizal
+* Class: CS121 Section 1
+* Semester: Spring 2016
+
+## Overview
+
+The program executes a interface where different graphical objects in java is used. Using ovals, lines and rectangles, a scene with road, car and people is created which can be viewed by executing the program. Also, an animation of the car moving along the road is present.
+
+## Compiling and Using
+
+Just use javac TrafficAnimation.java to compile the program using the terminal. Then use java TrafficAnimation to run the program. You can also press the run button to compile and execute the program in eclipse.
+
+## Discussion
+
+It was a pretty difficult project. I used raw numbers while giving the attributes of the oval, lines and such and it was a really terrible idea because everything would disperse when the screen size was changed. So, I learnt to set the attribute in terms of height and width so that the objects are in relative position to the height and width of the screen.
+
+## Extra Credit
+None
